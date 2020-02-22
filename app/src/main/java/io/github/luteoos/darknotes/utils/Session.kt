@@ -18,29 +18,9 @@ object Session {
         preferences = PreferenceManager.getDefaultSharedPreferences(context)
     }
 
-    var token: String
-        get() {
-           return preferences.getString(TOKEN, "") ?: ""
-        }
-        set(value) {
-            preferences.edit().putString(TOKEN, value).apply()
-        }
-
-
-    val userUUIDString: String
-        get() = preferences.getString(USER_UUID, "") ?: ""
-    var userUUID: UUID
-        get() {
-            val userUUID = preferences.getString(USER_UUID, "")
-            return UUID.fromString(userUUID)
-        }
-        set(value) {
-            preferences.edit().putString(USER_UUID, value.toString()).apply()
-        }
-
     var username: String
         get() {
-            return preferences.getString(USERNAME, "") ?: ""
+            return preferences.getString(USERNAME, Parameters.EMPTY_USERNAME) ?: Parameters.EMPTY_USERNAME
         }
         set(value) {
             preferences.edit().putString(USERNAME, value).apply()

@@ -17,7 +17,6 @@ class Application : Application() {
 
     private fun initDebugStuff() {
         Timber.plant(Timber.DebugTree())
-
         Timber.e("initDebugStuff")
         StrictMode.setThreadPolicy(
             StrictMode.ThreadPolicy.Builder()
