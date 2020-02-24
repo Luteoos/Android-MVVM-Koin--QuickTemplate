@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
+
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -73,4 +75,8 @@ dependencies {
 
     //rxjava
     implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+
+    //di
+    implementation "org.koin:koin-android:$koin_version"
+    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
 }

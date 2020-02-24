@@ -4,22 +4,21 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import io.github.luteoos.darknotes.R
-import io.github.luteoos.darknotes.utils.Session
+import io.github.luteoos.darknotes.baseAbstract.ActivityVM
 import io.github.luteoos.darknotes.view.fragment.MainScreenFragment
 import io.github.luteoos.darknotes.viewmodel.MainScreenViewModel
-import io.github.luteoos.mvvmbaselib.BaseActivityMVVM
 import io.github.luteoos.mvvmbaselib.Event
-import kotlinx.android.synthetic.main.activity_main_screen.*
 import kotlinx.android.synthetic.main.header_main_screen.*
-import java.lang.Exception
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class MainScreenActivity : BaseActivityMVVM<MainScreenViewModel>() {
+class MainScreenActivity : ActivityVM<MainScreenViewModel>() {
+
+    override val viewModel: MainScreenViewModel by viewModel()
 
     override fun getLayoutID(): Int = R.layout.activity_main_screen
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = getViewModel(this)
         connectToVMMessage()
         setBindings()
         switchFragment(MainScreenFragment())
@@ -43,7 +42,7 @@ class MainScreenActivity : BaseActivityMVVM<MainScreenViewModel>() {
     }
 
     private fun setUsername(){
-        tvWelcome.text = getString(R.string.welcome_message, Session.username)
+        tvWelcome.text = getString(R.string.welcome_message, session.username)
     }
 
     override fun onVMMessage(msg: Event<Int>) {

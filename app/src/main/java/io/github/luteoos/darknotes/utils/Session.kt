@@ -8,15 +8,12 @@ import io.github.luteoos.darknotes.view.activity.SplashScreenActivity
 import io.reactivex.rxjava3.core.Observable
 import java.util.*
 
-object Session {
+class Session(context: Context) {
     private val USER_UUID = "USER_UUID"
     private val TOKEN = "TOKEN"
     private val USERNAME = "USERNAME"
-    lateinit var preferences: SharedPreferences
+    private val preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 
-    fun init(context: Context) {
-        preferences = PreferenceManager.getDefaultSharedPreferences(context)
-    }
 
     var username: String
         get() {

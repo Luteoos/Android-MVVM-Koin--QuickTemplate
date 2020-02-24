@@ -3,11 +3,10 @@ package io.github.luteoos.darknotes.view.activity
 import android.content.Intent
 import android.os.Bundle
 import io.github.luteoos.darknotes.R
-import io.github.luteoos.darknotes.utils.Session
-import io.github.luteoos.mvvmbaselib.BaseActivityMVVMWithoutVM
+import io.github.luteoos.darknotes.baseAbstract.ActivityNoVM
 import kotlinx.android.synthetic.main.activity_splash_screen.*
 
-class SplashScreenActivity : BaseActivityMVVMWithoutVM() {
+class SplashScreenActivity : ActivityNoVM() {
 
     override fun getLayoutID(): Int = R.layout.activity_splash_screen
 
@@ -15,7 +14,6 @@ class SplashScreenActivity : BaseActivityMVVMWithoutVM() {
         super.onCreate(savedInstanceState)
         setWelcomeMessage()
         startMainScreenActivity()
-//        checkToken()
     }
 
     private fun startMainScreenActivity(){
@@ -26,16 +24,6 @@ class SplashScreenActivity : BaseActivityMVVMWithoutVM() {
     }
 
     private fun setWelcomeMessage(){
-        tvWelcomeMessage.text = getString(R.string.welcome_message, Session.username)
-    }
-
-    private fun checkToken(){
-//        val intent = Intent(this,
-//            if(Session.token.isNotEmpty())
-//                MainScreenActivity::class.java
-//            else
-////                SignInActivity::class.java)
-//        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-//        startActivity(intent)
+        tvWelcomeMessage.text = getString(R.string.welcome_message, session.username)
     }
 }
