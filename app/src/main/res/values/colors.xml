@@ -7,6 +7,7 @@
     <color name="colorAccentDark">#f899b4</color>
     <color name="colorFont">#fcd7e2</color>
     <color name="colorCardViewBackground">#7e082a</color>
+    <color name="colorBackgroundHeader">@color/colorPrimaryDark</color>
     <!--    <color name="colorPrimary">#1b1b1b</color>-->
     <!--    <color name="colorPrimaryLight">#616161</color>-->
     <!--    <color name="colorPrimaryDark">#424242</color>-->

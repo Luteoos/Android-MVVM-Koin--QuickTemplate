@@ -49,6 +49,13 @@
         <item name="cardBackgroundColor">@color/colorCardViewBackground</item>
     </style>
 
+    <style name="DefaultHeader" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="android:background">@color/colorBackgroundHeader</item>
+        <item name="cornerRadius">4dp</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:height">2dp</item>
+    </style>
+
     <style name="NestedRecyclerViewCard" parent="RecyclerViewCard">
         <item name="cardBackgroundColor">@color/colorBackgroundDark</item>
     </style>
@@ -59,13 +66,15 @@
     </style>
 
     <style name="HeaderTextView" parent="@android:style/TextAppearance.Widget.TextView">
-        <item name="android:textColor">@color/colorFont</item>
+        <item name="android:textColor">@color/colorAccent</item>
         <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
     <style name="AccentTextView" parent="@android:style/TextAppearance.Widget.TextView">
         <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:textSize">24sp</item>
+        <item name="android:textSize">18sp</item>
     </style>
 
     <style name="RoundedEditText" parent="Widget.AppCompat.EditText">
