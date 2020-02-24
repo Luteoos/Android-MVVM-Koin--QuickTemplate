@@ -1,4 +1,4 @@
-package io.github.luteoos.darknotes
+package io.github.luteoos.template
 
 import org.junit.Test
 

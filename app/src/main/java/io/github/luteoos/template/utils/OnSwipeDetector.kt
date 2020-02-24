@@ -1,4 +1,4 @@
-package io.github.luteoos.darknotes.utils
+package io.github.luteoos.template.utils
 
 import android.content.Context
 import android.view.GestureDetector

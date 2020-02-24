@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.github.luteoos.darknotes">
+    package="io.github.luteoos.template">
 
     <application
         android:name=".Application"
@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+
         <activity
             android:name=".view.activity.SplashScreenActivity"
             android:theme="@style/AppTheme">
@@ -21,14 +22,6 @@
             </intent-filter>
         </activity>
 
-        <activity
-            android:name=".view.activity.MainScreenActivity"
-            android:theme="@style/AppTheme"
-            android:windowSoftInputMode="stateAlwaysHidden|adjustNothing" />
-
-        <activity
-            android:name=".view.activity.SettingsActivity"
-            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

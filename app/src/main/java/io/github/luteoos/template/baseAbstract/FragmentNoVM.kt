@@ -1,4 +1,4 @@
-package io.github.luteoos.darknotes.baseAbstract
+package io.github.luteoos.template.baseAbstract
 
 import android.os.Bundle
 import android.view.LayoutInflater

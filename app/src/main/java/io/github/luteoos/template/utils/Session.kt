@@ -1,16 +1,13 @@
-package io.github.luteoos.darknotes.utils
+package io.github.luteoos.template.utils
 
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.preference.PreferenceManager
-import io.github.luteoos.darknotes.view.activity.SplashScreenActivity
-import io.reactivex.rxjava3.core.Observable
-import java.util.*
+import io.github.luteoos.template.view.activity.SplashScreenActivity
 
 class Session(context: Context) {
     private val USER_UUID = "USER_UUID"
-    private val TOKEN = "TOKEN"
     private val USERNAME = "USERNAME"
     private val preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
 

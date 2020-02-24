@@ -1,9 +1,9 @@
-package io.github.luteoos.darknotes
+package io.github.luteoos.template
 
 import android.app.Application
 import android.os.StrictMode
 import com.luteoos.kotlin.mvvmbaselib.BuildConfig
-import io.github.luteoos.darknotes.di.koinModules
+import io.github.luteoos.template.di.koinModules
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -12,7 +12,6 @@ import timber.log.Timber
 class Application : Application() {
     override fun onCreate() {
         super.onCreate()
-        Timber.e(this.toString())
         startKoin {
             androidLogger()
             androidContext(this@Application)
@@ -31,13 +30,6 @@ class Application : Application() {
                 .detectDiskWrites()
                 .detectNetwork()
                 .penaltyLog()
-                .build())
-        StrictMode.setVmPolicy(
-            StrictMode.VmPolicy.Builder()
-                .detectLeakedSqlLiteObjects()
-                .detectLeakedClosableObjects()
-                .penaltyLog()
-                .penaltyDeath()
                 .build())
     }
 }
