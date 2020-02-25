@@ -11,7 +11,6 @@ android {
         applicationId "io.github.luteoos.template"
         minSdkVersion 24
         targetSdkVersion 29
-        versionCode 1
         versionName "$app_version"
         multiDexEnabled true
 
@@ -31,11 +30,13 @@ android {
         production {
             dimension "server"
             resValue "string", "app_name", "Template"
+            versionCode 1
         }
         staging {
             dimension "server"
             applicationIdSuffix ".dev"
             resValue "string", "app_name", "Template - staging"
+            versionCode 1
         }
     }
     compileOptions {
